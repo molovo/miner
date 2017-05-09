@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>Miner::Query::Type - </title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="/Miner" data-name="miner">
+      <a href="../../Miner.html">Miner</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Collection" data-name="miner::collection">
+      <a href="../../Miner/Collection.html">Collection</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Config" data-name="miner::config">
+      <a href="../../Miner/Config.html">Config</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Database" data-name="miner::database">
+      <a href="../../Miner/Database.html">Database</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Driver" data-name="miner::driver">
+      <a href="../../Miner/Driver.html">Driver</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Driver/Mysql" data-name="miner::driver::mysql">
+      <a href="../../Miner/Driver/Mysql.html">Mysql</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Driver/Sqlite" data-name="miner::driver::sqlite">
+      <a href="../../Miner/Driver/Sqlite.html">Sqlite</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Field" data-name="miner::field">
+      <a href="../../Miner/Field.html">Field</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Field/Type" data-name="miner::field::type">
+      <a href="../../Miner/Field/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Model" data-name="miner::model">
+      <a href="../../Miner/Model.html">Model</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="/Miner/Query" data-name="miner::query">
+      <a href="../../Miner/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Query/JoinType" data-name="miner::query::jointype">
+      <a href="../../Miner/Query/JoinType.html">JoinType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Sort" data-name="miner::query::sort">
+      <a href="../../Miner/Query/Sort.html">Sort</a>
+      
+    </li>
+  
+  <li class=" current" data-id="/Miner/Query/Type" data-name="miner::query::type">
+      <a href="../../Miner/Query/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Value" data-name="miner::query::value">
+      <a href="../../Miner/Query/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryBuilder" data-name="miner::querybuilder">
+      <a href="../../Miner/QueryBuilder.html">QueryBuilder</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryCompilationError" data-name="miner::querycompilationerror">
+      <a href="../../Miner/QueryCompilationError.html">QueryCompilationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Relationship" data-name="miner::relationship">
+      <a href="../../Miner/Relationship.html">Relationship</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Table" data-name="miner::table">
+      <a href="../../Miner/Table.html">Table</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Miner::Query::Type
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Constants for declaring query types</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+
+
+
+  
+    <h2>Enum Members</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Select">
+        <strong>Select</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="SelectCount">
+        <strong>SelectCount</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Update">
+        <strong>Update</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Insert">
+        <strong>Insert</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Delete">
+        <strong>Delete</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Join">
+        <strong>Join</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#delete%3F-instance-method" class="signature"><strong>#delete?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#insert%3F-instance-method" class="signature"><strong>#insert?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#join%3F-instance-method" class="signature"><strong>#join?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#select%3F-instance-method" class="signature"><strong>#select?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#select_count%3F-instance-method" class="signature"><strong>#select_count?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update%3F-instance-method" class="signature"><strong>#update?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="delete?-instance-method">
+      <div class="signature">
+        
+        def <strong>delete?</strong>
+
+        <a class="method-permalink" href="#delete%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="insert?-instance-method">
+      <div class="signature">
+        
+        def <strong>insert?</strong>
+
+        <a class="method-permalink" href="#insert%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="join?-instance-method">
+      <div class="signature">
+        
+        def <strong>join?</strong>
+
+        <a class="method-permalink" href="#join%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="select?-instance-method">
+      <div class="signature">
+        
+        def <strong>select?</strong>
+
+        <a class="method-permalink" href="#select%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="select_count?-instance-method">
+      <div class="signature">
+        
+        def <strong>select_count?</strong>
+
+        <a class="method-permalink" href="#select_count%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update?-instance-method">
+      <div class="signature">
+        
+        def <strong>update?</strong>
+
+        <a class="method-permalink" href="#update%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>Miner::Query::JoinType - </title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="/Miner" data-name="miner">
+      <a href="../../Miner.html">Miner</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Collection" data-name="miner::collection">
+      <a href="../../Miner/Collection.html">Collection</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Config" data-name="miner::config">
+      <a href="../../Miner/Config.html">Config</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Database" data-name="miner::database">
+      <a href="../../Miner/Database.html">Database</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Driver" data-name="miner::driver">
+      <a href="../../Miner/Driver.html">Driver</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Driver/Mysql" data-name="miner::driver::mysql">
+      <a href="../../Miner/Driver/Mysql.html">Mysql</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Driver/Sqlite" data-name="miner::driver::sqlite">
+      <a href="../../Miner/Driver/Sqlite.html">Sqlite</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Field" data-name="miner::field">
+      <a href="../../Miner/Field.html">Field</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Field/Type" data-name="miner::field::type">
+      <a href="../../Miner/Field/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Model" data-name="miner::model">
+      <a href="../../Miner/Model.html">Model</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="/Miner/Query" data-name="miner::query">
+      <a href="../../Miner/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="/Miner/Query/JoinType" data-name="miner::query::jointype">
+      <a href="../../Miner/Query/JoinType.html">JoinType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Sort" data-name="miner::query::sort">
+      <a href="../../Miner/Query/Sort.html">Sort</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Type" data-name="miner::query::type">
+      <a href="../../Miner/Query/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Value" data-name="miner::query::value">
+      <a href="../../Miner/Query/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryBuilder" data-name="miner::querybuilder">
+      <a href="../../Miner/QueryBuilder.html">QueryBuilder</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryCompilationError" data-name="miner::querycompilationerror">
+      <a href="../../Miner/QueryCompilationError.html">QueryCompilationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Relationship" data-name="miner::relationship">
+      <a href="../../Miner/Relationship.html">Relationship</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Table" data-name="miner::table">
+      <a href="../../Miner/Table.html">Table</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">enum</span> Miner::Query::JoinType
+
+</h1>
+
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>Constants for declaring join types</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+
+
+
+  
+    <h2>Enum Members</h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Left">
+        <strong>Left</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Right">
+        <strong>Right</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Inner">
+        <strong>Inner</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Cross">
+        <strong>Cross</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Straight">
+        <strong>Straight</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="LeftOuter">
+        <strong>LeftOuter</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="RightOuter">
+        <strong>RightOuter</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NaturalLeft">
+        <strong>NaturalLeft</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NaturalRight">
+        <strong>NaturalRight</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NaturalLeftOuter">
+        <strong>NaturalLeftOuter</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="NaturalRightOuter">
+        <strong>NaturalRightOuter</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#cross%3F-instance-method" class="signature"><strong>#cross?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inner%3F-instance-method" class="signature"><strong>#inner?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left%3F-instance-method" class="signature"><strong>#left?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_outer%3F-instance-method" class="signature"><strong>#left_outer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#natural_left%3F-instance-method" class="signature"><strong>#natural_left?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#natural_left_outer%3F-instance-method" class="signature"><strong>#natural_left_outer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#natural_right%3F-instance-method" class="signature"><strong>#natural_right?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#natural_right_outer%3F-instance-method" class="signature"><strong>#natural_right_outer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right%3F-instance-method" class="signature"><strong>#right?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_outer%3F-instance-method" class="signature"><strong>#right_outer?</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#straight%3F-instance-method" class="signature"><strong>#straight?</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="cross?-instance-method">
+      <div class="signature">
+        
+        def <strong>cross?</strong>
+
+        <a class="method-permalink" href="#cross%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inner?-instance-method">
+      <div class="signature">
+        
+        def <strong>inner?</strong>
+
+        <a class="method-permalink" href="#inner%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left?-instance-method">
+      <div class="signature">
+        
+        def <strong>left?</strong>
+
+        <a class="method-permalink" href="#left%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_outer?-instance-method">
+      <div class="signature">
+        
+        def <strong>left_outer?</strong>
+
+        <a class="method-permalink" href="#left_outer%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="natural_left?-instance-method">
+      <div class="signature">
+        
+        def <strong>natural_left?</strong>
+
+        <a class="method-permalink" href="#natural_left%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="natural_left_outer?-instance-method">
+      <div class="signature">
+        
+        def <strong>natural_left_outer?</strong>
+
+        <a class="method-permalink" href="#natural_left_outer%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="natural_right?-instance-method">
+      <div class="signature">
+        
+        def <strong>natural_right?</strong>
+
+        <a class="method-permalink" href="#natural_right%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="natural_right_outer?-instance-method">
+      <div class="signature">
+        
+        def <strong>natural_right_outer?</strong>
+
+        <a class="method-permalink" href="#natural_right_outer%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right?-instance-method">
+      <div class="signature">
+        
+        def <strong>right?</strong>
+
+        <a class="method-permalink" href="#right%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_outer?-instance-method">
+      <div class="signature">
+        
+        def <strong>right_outer?</strong>
+
+        <a class="method-permalink" href="#right_outer%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="straight?-instance-method">
+      <div class="signature">
+        
+        def <strong>straight?</strong>
+
+        <a class="method-permalink" href="#straight%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

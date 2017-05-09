@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>Miner::Query - </title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="/Miner" data-name="miner">
+      <a href="../Miner.html">Miner</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Collection" data-name="miner::collection">
+      <a href="../Miner/Collection.html">Collection</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Config" data-name="miner::config">
+      <a href="../Miner/Config.html">Config</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Database" data-name="miner::database">
+      <a href="../Miner/Database.html">Database</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Driver" data-name="miner::driver">
+      <a href="../Miner/Driver.html">Driver</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Driver/Mysql" data-name="miner::driver::mysql">
+      <a href="../Miner/Driver/Mysql.html">Mysql</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Driver/Sqlite" data-name="miner::driver::sqlite">
+      <a href="../Miner/Driver/Sqlite.html">Sqlite</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Field" data-name="miner::field">
+      <a href="../Miner/Field.html">Field</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Field/Type" data-name="miner::field::type">
+      <a href="../Miner/Field/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Model" data-name="miner::model">
+      <a href="../Miner/Model.html">Model</a>
+      
+    </li>
+  
+  <li class="parent current" data-id="/Miner/Query" data-name="miner::query">
+      <a href="../Miner/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Query/JoinType" data-name="miner::query::jointype">
+      <a href="../Miner/Query/JoinType.html">JoinType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Sort" data-name="miner::query::sort">
+      <a href="../Miner/Query/Sort.html">Sort</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Type" data-name="miner::query::type">
+      <a href="../Miner/Query/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Value" data-name="miner::query::value">
+      <a href="../Miner/Query/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryBuilder" data-name="miner::querybuilder">
+      <a href="../Miner/QueryBuilder.html">QueryBuilder</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryCompilationError" data-name="miner::querycompilationerror">
+      <a href="../Miner/QueryCompilationError.html">QueryCompilationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Relationship" data-name="miner::relationship">
+      <a href="../Miner/Relationship.html">Relationship</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Table" data-name="miner::table">
+      <a href="../Miner/Table.html">Table</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Miner::Query
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Miner/Query.html">Miner::Query</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>Overview</h2>
+
+  <p>This class creates query objects, which will later be compiled
+into SQL statements by the query builder</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+
+
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28table%3ATable%7CString%2Cdatabase%3DMiner.default_database%29-class-method" class="signature"><strong>.new</strong>(table : Table | String, database = <span class="t">Miner</span>.default_database)</a>
+        
+          <div class="summary"><p>Create a new query</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#clauses%3AHash%28String%2CArray%28%7BString%2CMiner%3A%3AQuery%3A%3AValue%2CString%2CMiner%3A%3AQuery%3A%3AValue%7D%29%29-instance-method" class="signature"><strong>#clauses</strong> : Hash(String, Array({String, Miner::Query::Value, String, Miner::Query::Value}))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#compile%3AString%3F-instance-method" class="signature"><strong>#compile</strong> : String?</a>
+        
+          <div class="summary"><p>Compile the query, and store the compiled SQL statement</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#compiled%3ABool-instance-method" class="signature"><strong>#compiled</strong> : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#database%3AMiner%3A%3ADatabase-instance-method" class="signature"><strong>#database</strong> : Miner::Database</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#delete%3Aself-instance-method" class="signature"><strong>#delete</strong> : self</a>
+        
+          <div class="summary"><p>Set the query type to delete, and execute the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#execute%3ABoolean-instance-method" class="signature"><strong>#execute</strong> : Boolean</a>
+        
+          <div class="summary"><p>Execute the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fetch%3ACollection%3F-instance-method" class="signature"><strong>#fetch</strong> : Collection?</a>
+        
+          <div class="summary"><p>Execute the query, and return the result set</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#fields%3AArray%28String%29-instance-method" class="signature"><strong>#fields</strong> : Array(String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#from%28table%3ATable%7CString%29%3Aself-instance-method" class="signature"><strong>#from</strong>(table : Table | String) : self</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#group_by%28%2Afields%3AString%29-instance-method" class="signature"><strong>#group_by</strong>(*fields : String)</a>
+        
+          <div class="summary"><p>Set the group fields for the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#having%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method" class="signature"><strong>#having</strong>(column : Value, operator : String, value : Value) : self</a>
+        
+          <div class="summary"><p>Add a HAVING clause to the query, with AND as a delimiter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#insert%28values%3AHash%28String%2CValue%29%29%3Aself-instance-method" class="signature"><strong>#insert</strong>(values : Hash(String, Value)) : self</a>
+        
+          <div class="summary"><p>Set the query type to insert, set the insert values, and execute the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#join%28table%3ATable%7CString%2Ctype%3AJoinType%3DJoinType%3A%3ALeft%29%3Aself-instance-method" class="signature"><strong>#join</strong>(table : Table | String, type : JoinType = <span class="t">JoinType</span><span class="t">::</span><span class="t">Left</span>) : self</a>
+        
+          <div class="summary"><p>Add a join to the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#join_type%3AMiner%3A%3AQuery%3A%3AJoinType%3F-instance-method" class="signature"><strong>#join_type</strong> : Miner::Query::JoinType?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#joins%3AArray%28Miner%3A%3AQuery%29-instance-method" class="signature"><strong>#joins</strong> : Array(Miner::Query)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#on%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method" class="signature"><strong>#on</strong>(column : Value, operator : String, value : Value) : self</a>
+        
+          <div class="summary"><p>Add an ON clause to the query, with AND as a delimiter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_having%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method" class="signature"><strong>#or_having</strong>(column : Value, operator : String, value : Value) : self</a>
+        
+          <div class="summary"><p>Add a HAVING clause to the query, with OR as a delimiter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_on%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method" class="signature"><strong>#or_on</strong>(column : Value, operator : String, value : Value) : self</a>
+        
+          <div class="summary"><p>Add an ON clause to the query, with AND as a delimiter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#or_where%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method" class="signature"><strong>#or_where</strong>(column : Value, operator : String, value : Value) : self</a>
+        
+          <div class="summary"><p>Add a WHERE clause to the query, with OR as a delimiter</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#order_by%28%2Afields%3AString%7CTuple%28String%2CSort%29%29-instance-method" class="signature"><strong>#order_by</strong>(*fields : String | Tuple(String, Sort))</a>
+        
+          <div class="summary"><p>A shorthand for setting multiple sort fields at once</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#order_by%28field%3AString%2Cdirection%3ASort%3DSort%3A%3AAsc%29-instance-method" class="signature"><strong>#order_by</strong>(field : String, direction : Sort = <span class="t">Sort</span><span class="t">::</span><span class="t">Asc</span>)</a>
+        
+          <div class="summary"><p>Set the order fields for the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parent%3AMiner%3A%3AQuery%3F-instance-method" class="signature"><strong>#parent</strong> : Miner::Query?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#select%28%2Afields%3AString%29%3Aself-instance-method" class="signature"><strong>#select</strong>(*fields : String) : self</a>
+        
+          <div class="summary"><p>Set the query type to select, and set the fields to be selected</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_join_type%28join_type%3AJoinType%29%3Aself-instance-method" class="signature"><strong>#set_join_type</strong>(join_type : JoinType) : self</a>
+        
+          <div class="summary"><p>Sets the join type for a child query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_parent%28parent%3AQuery%29%3Aself-instance-method" class="signature"><strong>#set_parent</strong>(parent : Query) : self</a>
+        
+          <div class="summary"><p>Set a parent query for subqueries and joins</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_type%28type%3AType%29%3Aself-instance-method" class="signature"><strong>#set_type</strong>(type : Type) : self</a>
+        
+          <div class="summary"><p>Sets the type for the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sql%3AString%3F-instance-method" class="signature"><strong>#sql</strong> : String?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#table%3AMiner%3A%3ATable-instance-method" class="signature"><strong>#table</strong> : Miner::Table</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type%3AMiner%3A%3AQuery%3A%3AType-instance-method" class="signature"><strong>#type</strong> : Miner::Query::Type</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update%28values%3AHash%28String%2CValue%29%29%3Aself-instance-method" class="signature"><strong>#update</strong>(values : Hash(String, Value)) : self</a>
+        
+          <div class="summary"><p>Set the query type to update, set the update values, and execute the query</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#values%3AHash%28String%2CMiner%3A%3AQuery%3A%3AValue%29%3F-instance-method" class="signature"><strong>#values</strong> : Hash(String, Miner::Query::Value)?</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#where%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method" class="signature"><strong>#where</strong>(column : Value, operator : String, value : Value) : self</a>
+        
+          <div class="summary"><p>Add a WHERE clause to the query, with AND as a delimiter</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="new&#40;table:Table|String,database&#61;Miner.default_database&#41;-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(table : <a href="../Miner/Table.html">Table</a> | String, database = <span class="t">Miner</span>.default_database)
+
+        <a class="method-permalink" href="#new%28table%3ATable%7CString%2Cdatabase%3DMiner.default_database%29-class-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Create a new query</p>
+
+<p>Queries can be created by passing a table name, or an
+instance of Miner::Table</p>
+
+<pre><code><span class="c"># With a table name</span>
+query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span> <span class="s">&quot;countries&quot;</span>
+
+<span class="c"># With a Miner::Table instance</span>
+table <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Table</span>.<span class="k">new</span> <span class="s">&quot;countries&quot;</span>
+query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span> table</code></pre>
+
+<p>By default, queries are executed against the database defined
+in <code><a href="../Miner.html#default_database-class-method">Miner.default_database</a></code>. This can be overridden by passing
+an instance of <code><a href="../Miner/Database.html">Miner::Database</a></code> as a second parameter</p>
+
+<pre><code>config <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Config</span>.<span class="k">new</span>({
+  <span class="s">&quot;name&quot;</span>     => <span class="s">&quot;my_other_database&quot;</span>,
+  <span class="s">&quot;username&quot;</span> => <span class="s">&quot;my_user&quot;</span>,
+  <span class="s">&quot;password&quot;</span> => <span class="s">&quot;my_password&quot;</span>
+})
+database <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Database</span>.<span class="k">new</span> config
+query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span> <span class="s">&quot;my_table&quot;</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="clauses:Hash&#40;String,Array&#40;&#123;String,Miner::Query::Value,String,Miner::Query::Value&#125;&#41;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>clauses</strong> : Hash(String, Array({String, <a href="../Miner/Query/Value.html">Miner::Query::Value</a>, String, <a href="../Miner/Query/Value.html">Miner::Query::Value</a>}))
+
+        <a class="method-permalink" href="#clauses%3AHash%28String%2CArray%28%7BString%2CMiner%3A%3AQuery%3A%3AValue%2CString%2CMiner%3A%3AQuery%3A%3AValue%7D%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="compile:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>compile</strong> : String?
+
+        <a class="method-permalink" href="#compile%3AString%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Compile the query, and store the compiled SQL statement</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="compiled:Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>compiled</strong> : Bool
+
+        <a class="method-permalink" href="#compiled%3ABool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="database:Miner::Database-instance-method">
+      <div class="signature">
+        
+        def <strong>database</strong> : <a href="../Miner/Database.html">Miner::Database</a>
+
+        <a class="method-permalink" href="#database%3AMiner%3A%3ADatabase-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="delete:self-instance-method">
+      <div class="signature">
+        
+        def <strong>delete</strong> : self
+
+        <a class="method-permalink" href="#delete%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the query type to delete, and execute the query</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="execute:Boolean-instance-method">
+      <div class="signature">
+        
+        def <strong>execute</strong> : Boolean
+
+        <a class="method-permalink" href="#execute%3ABoolean-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Execute the query</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fetch:Collection?-instance-method">
+      <div class="signature">
+        
+        def <strong>fetch</strong> : <a href="../Miner/Collection.html">Collection</a>?
+
+        <a class="method-permalink" href="#fetch%3ACollection%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Execute the query, and return the result set</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="fields:Array&#40;String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>fields</strong> : Array(String)
+
+        <a class="method-permalink" href="#fields%3AArray%28String%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="from&#40;table:Table|String&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>from</strong>(table : <a href="../Miner/Table.html">Table</a> | String) : self
+
+        <a class="method-permalink" href="#from%28table%3ATable%7CString%29%3Aself-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="group_by&#40;*fields:String&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>group_by</strong>(*fields : String)
+
+        <a class="method-permalink" href="#group_by%28%2Afields%3AString%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the group fields for the query</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="having&#40;column:Value,operator:String,value:Value&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>having</strong>(column : <a href="../Miner/Query/Value.html">Value</a>, operator : String, value : <a href="../Miner/Query/Value.html">Value</a>) : self
+
+        <a class="method-permalink" href="#having%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add a HAVING clause to the query, with AND as a delimiter</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .having(<span class="s">&quot;country_id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="n">12</span>)
+  .having(<span class="s">&quot;population&quot;</span>, <span class="s">&quot;&gt;&#61;&quot;</span>, <span class="n">4000</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="insert&#40;values:Hash&#40;String,Value&#41;&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>insert</strong>(values : Hash(String, <a href="../Miner/Query/Value.html">Value</a>)) : self
+
+        <a class="method-permalink" href="#insert%28values%3AHash%28String%2CValue%29%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the query type to insert, set the insert values,
+and execute the query</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="join&#40;table:Table|String,type:JoinType&#61;JoinType::Left&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>join</strong>(table : <a href="../Miner/Table.html">Table</a> | String, type : <a href="../Miner/Query/JoinType.html">JoinType</a> = <span class="t">JoinType</span><span class="t">::</span><span class="t">Left</span>) : self
+
+        <a class="method-permalink" href="#join%28table%3ATable%7CString%2Ctype%3AJoinType%3DJoinType%3A%3ALeft%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add a join to the query</p>
+
+<p>Joins can be defined using a table name</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .join <span class="s">&quot;country&quot;</span></code></pre>
+
+<p>or an instance of <code><a href="../Miner/Table.html">Miner::Table</a></code></p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .join <span class="t">Miner</span><span class="t">::</span><span class="t">Table</span>.<span class="k">new</span>(<span class="s">&quot;country&quot;</span>)</code></pre>
+
+<h4>Accessing parent fields</h4>
+
+<p>When specifying ON clauses for a join, fields on the parent
+table can be accessed using the <code><a href="../Miner/Query.html#parent%3AMiner%3A%3AQuery%3F-instance-method">#parent</a></code> keyword</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .join(<span class="s">&quot;country&quot;</span>)
+    .on(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="s">&quot;parent.country_id&quot;</span>)</code></pre>
+
+<h4>Join Types</h4>
+
+<p>The join type can be specified by passing a member of
+<code><a href="../Miner/Query.html">Miner::Query</a>::JoinType</code> as the second argument</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .join <span class="s">&quot;country&quot;</span>, <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span><span class="t">::</span><span class="t">JoinType</span><span class="t">::</span><span class="t">Right</span></code></pre>
+
+<h4>Nesting</h4>
+
+<p>Joins return a new instance of <code><a href="../Miner/Query.html">Miner::Query</a></code>, and can
+be nested indefinitely</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .join(<span class="s">&quot;country&quot;</span>)
+    .on(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="s">&quot;parent.country_id&quot;</span>)
+    .join(<span class="s">&quot;language&quot;</span>)
+      .on(<span class="s">&quot;country_id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="s">&quot;parent.id&quot;</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="join_type:Miner::Query::JoinType?-instance-method">
+      <div class="signature">
+        
+        def <strong>join_type</strong> : <a href="../Miner/Query/JoinType.html">Miner::Query::JoinType</a>?
+
+        <a class="method-permalink" href="#join_type%3AMiner%3A%3AQuery%3A%3AJoinType%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="joins:Array&#40;Miner::Query&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>joins</strong> : Array(<a href="../Miner/Query.html">Miner::Query</a>)
+
+        <a class="method-permalink" href="#joins%3AArray%28Miner%3A%3AQuery%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="on&#40;column:Value,operator:String,value:Value&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>on</strong>(column : <a href="../Miner/Query/Value.html">Value</a>, operator : String, value : <a href="../Miner/Query/Value.html">Value</a>) : self
+
+        <a class="method-permalink" href="#on%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add an ON clause to the query, with AND as a delimiter</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .join(<span class="s">&quot;country&quot;</span>)
+    .on(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="s">&quot;parent.country_id&quot;</span>)
+    .on(<span class="s">&quot;population&quot;</span>, <span class="s">&quot;&gt;&#61;&quot;</span>, <span class="n">4000</span>)</code></pre>
+
+<p>An exception is raised if an on clause is applied to a
+query which is not a join</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .on(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="n">12</span>) <span class="c"># Raises an exception</span></code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_having&#40;column:Value,operator:String,value:Value&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>or_having</strong>(column : <a href="../Miner/Query/Value.html">Value</a>, operator : String, value : <a href="../Miner/Query/Value.html">Value</a>) : self
+
+        <a class="method-permalink" href="#or_having%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add a HAVING clause to the query, with OR as a delimiter</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .having(<span class="s">&quot;country_id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="n">12</span>)
+  .or_having(<span class="s">&quot;population&quot;</span>, <span class="s">&quot;&gt;&#61;&quot;</span>, <span class="n">4000</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_on&#40;column:Value,operator:String,value:Value&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>or_on</strong>(column : <a href="../Miner/Query/Value.html">Value</a>, operator : String, value : <a href="../Miner/Query/Value.html">Value</a>) : self
+
+        <a class="method-permalink" href="#or_on%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add an ON clause to the query, with AND as a delimiter</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .join(<span class="s">&quot;country&quot;</span>)
+    .on(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="s">&quot;parent.country_id&quot;</span>)
+    .or_on(<span class="s">&quot;population&quot;</span>, <span class="s">&quot;&gt;&#61;&quot;</span>, <span class="n">4000</span>)</code></pre>
+
+<p>An exception is raised if an on clause is applied to a
+query which is not a join</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .on(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="n">12</span>) <span class="c"># Raises an exception</span>
+  .or_on(<span class="s">&quot;population&quot;</span>, <span class="s">&quot;&gt;&#61;&quot;</span>, <span class="n">4000</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="or_where&#40;column:Value,operator:String,value:Value&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>or_where</strong>(column : <a href="../Miner/Query/Value.html">Value</a>, operator : String, value : <a href="../Miner/Query/Value.html">Value</a>) : self
+
+        <a class="method-permalink" href="#or_where%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add a WHERE clause to the query, with OR as a delimiter</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .where(<span class="s">&quot;country_id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="n">12</span>)
+  .or_where(<span class="s">&quot;population&quot;</span>, <span class="s">&quot;&gt;&#61;&quot;</span>, <span class="n">4000</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="order_by&#40;*fields:String|Tuple&#40;String,Sort&#41;&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>order_by</strong>(*fields : String | Tuple(String, <a href="../Miner/Query/Sort.html">Sort</a>))
+
+        <a class="method-permalink" href="#order_by%28%2Afields%3AString%7CTuple%28String%2CSort%29%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>A shorthand for setting multiple sort fields at once</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;countries&quot;</span>)
+  .order_by(<span class="s">&quot;name&quot;</span>, <span class="s">&quot;language&quot;</span>)</code></pre>
+
+<p>The sort direction can be specified by passing tuples containing the
+field name and a member of <code><a href="../Miner/Query.html">Miner::Query</a>::Sort</code></p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;countries&quot;</span>)
+  .order_by(
+    {<span class="s">&quot;name&quot;</span>, <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span><span class="t">::</span><span class="t">Sort</span><span class="t">::</span><span class="t">Desc</span>},
+    {<span class="s">&quot;language&quot;</span>, <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span><span class="t">::</span><span class="t">Sort</span><span class="t">::</span><span class="t">Asc</span>}
+  )</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="order_by&#40;field:String,direction:Sort&#61;Sort::Asc&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>order_by</strong>(field : String, direction : <a href="../Miner/Query/Sort.html">Sort</a> = <span class="t">Sort</span><span class="t">::</span><span class="t">Asc</span>)
+
+        <a class="method-permalink" href="#order_by%28field%3AString%2Cdirection%3ASort%3DSort%3A%3AAsc%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the order fields for the query</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;countries&quot;</span>)
+  .order_by(<span class="s">&quot;name&quot;</span>)</code></pre>
+
+<p>The sort direction can be specified by passing a member of
+<code><a href="../Miner/Query.html">Miner::Query</a>::Sort</code> as a second argument</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;countries&quot;</span>)
+  .order_by(<span class="s">&quot;name&quot;</span>, <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span><span class="t">::</span><span class="t">Sort</span><span class="t">::</span><span class="t">Desc</span>)</code></pre>
+
+<p>Multiple fields can be specified by chaining the method</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;countries&quot;</span>)
+  .order_by(<span class="s">&quot;language&quot;</span>, <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span><span class="t">::</span><span class="t">Sort</span><span class="t">::</span><span class="t">Asc</span>)
+  .order_by(<span class="s">&quot;name&quot;</span>, <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span><span class="t">::</span><span class="t">Sort</span><span class="t">::</span><span class="t">Asc</span>)</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parent:Miner::Query?-instance-method">
+      <div class="signature">
+        
+        def <strong>parent</strong> : <a href="../Miner/Query.html">Miner::Query</a>?
+
+        <a class="method-permalink" href="#parent%3AMiner%3A%3AQuery%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="select&#40;*fields:String&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>select</strong>(*fields : String) : self
+
+        <a class="method-permalink" href="#select%28%2Afields%3AString%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the query type to select, and set the fields to be selected</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_join_type&#40;join_type:JoinType&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_join_type</strong>(join_type : <a href="../Miner/Query/JoinType.html">JoinType</a>) : self
+
+        <a class="method-permalink" href="#set_join_type%28join_type%3AJoinType%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the join type for a child query</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_parent&#40;parent:Query&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_parent</strong>(parent : <a href="../Miner/Query.html">Query</a>) : self
+
+        <a class="method-permalink" href="#set_parent%28parent%3AQuery%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set a parent query for subqueries and joins</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_type&#40;type:Type&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>set_type</strong>(type : <a href="../Miner/Query/Type.html">Type</a>) : self
+
+        <a class="method-permalink" href="#set_type%28type%3AType%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Sets the type for the query</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sql:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>sql</strong> : String?
+
+        <a class="method-permalink" href="#sql%3AString%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="table:Miner::Table-instance-method">
+      <div class="signature">
+        
+        def <strong>table</strong> : <a href="../Miner/Table.html">Miner::Table</a>
+
+        <a class="method-permalink" href="#table%3AMiner%3A%3ATable-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type:Miner::Query::Type-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong> : <a href="../Miner/Query/Type.html">Miner::Query::Type</a>
+
+        <a class="method-permalink" href="#type%3AMiner%3A%3AQuery%3A%3AType-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update&#40;values:Hash&#40;String,Value&#41;&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>update</strong>(values : Hash(String, <a href="../Miner/Query/Value.html">Value</a>)) : self
+
+        <a class="method-permalink" href="#update%28values%3AHash%28String%2CValue%29%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Set the query type to update, set the update values,
+and execute the query</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="values:Hash&#40;String,Miner::Query::Value&#41;?-instance-method">
+      <div class="signature">
+        
+        def <strong>values</strong> : Hash(String, <a href="../Miner/Query/Value.html">Miner::Query::Value</a>)?
+
+        <a class="method-permalink" href="#values%3AHash%28String%2CMiner%3A%3AQuery%3A%3AValue%29%3F-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="where&#40;column:Value,operator:String,value:Value&#41;:self-instance-method">
+      <div class="signature">
+        
+        def <strong>where</strong>(column : <a href="../Miner/Query/Value.html">Value</a>, operator : String, value : <a href="../Miner/Query/Value.html">Value</a>) : self
+
+        <a class="method-permalink" href="#where%28column%3AValue%2Coperator%3AString%2Cvalue%3AValue%29%3Aself-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>Add a WHERE clause to the query, with AND as a delimiter</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .where(<span class="s">&quot;country_id&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="n">12</span>)
+  .where(<span class="s">&quot;population&quot;</span>, <span class="s">&quot;&gt;&#61;&quot;</span>, <span class="n">4000</span>)</code></pre>
+
+<p>Sub-queries can be passed into where clauses by creating a new
+instance of Miner::Query</p>
+
+<pre><code>query <span class="o">=</span> <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;city&quot;</span>)
+  .where(<span class="s">&quot;country_id&quot;</span>, <span class="s">&quot;IN&quot;</span>, <span class="t">Miner</span><span class="t">::</span><span class="t">Query</span>.<span class="k">new</span>(<span class="s">&quot;country&quot;</span>))
+    .select(<span class="s">&quot;id&quot;</span>)
+    .where(<span class="s">&quot;language&quot;</span>, <span class="s">&quot;&#61;&quot;</span>, <span class="s">&quot;British&quot;</span>)
+  )</code></pre></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../js/doc.js"></script>
+  <title>Miner::Driver::Sqlite - </title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="/Miner" data-name="miner">
+      <a href="../../Miner.html">Miner</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Collection" data-name="miner::collection">
+      <a href="../../Miner/Collection.html">Collection</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Config" data-name="miner::config">
+      <a href="../../Miner/Config.html">Config</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Database" data-name="miner::database">
+      <a href="../../Miner/Database.html">Database</a>
+      
+    </li>
+  
+  <li class="parent open current" data-id="/Miner/Driver" data-name="miner::driver">
+      <a href="../../Miner/Driver.html">Driver</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Driver/Mysql" data-name="miner::driver::mysql">
+      <a href="../../Miner/Driver/Mysql.html">Mysql</a>
+      
+    </li>
+  
+  <li class=" current" data-id="/Miner/Driver/Sqlite" data-name="miner::driver::sqlite">
+      <a href="../../Miner/Driver/Sqlite.html">Sqlite</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Field" data-name="miner::field">
+      <a href="../../Miner/Field.html">Field</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Field/Type" data-name="miner::field::type">
+      <a href="../../Miner/Field/Type.html">Type</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Model" data-name="miner::model">
+      <a href="../../Miner/Model.html">Model</a>
+      
+    </li>
+  
+  <li class="parent " data-id="/Miner/Query" data-name="miner::query">
+      <a href="../../Miner/Query.html">Query</a>
+      
+        <ul>
+  
+  <li class=" " data-id="/Miner/Query/JoinType" data-name="miner::query::jointype">
+      <a href="../../Miner/Query/JoinType.html">JoinType</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Sort" data-name="miner::query::sort">
+      <a href="../../Miner/Query/Sort.html">Sort</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Type" data-name="miner::query::type">
+      <a href="../../Miner/Query/Type.html">Type</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Query/Value" data-name="miner::query::value">
+      <a href="../../Miner/Query/Value.html">Value</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryBuilder" data-name="miner::querybuilder">
+      <a href="../../Miner/QueryBuilder.html">QueryBuilder</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/QueryCompilationError" data-name="miner::querycompilationerror">
+      <a href="../../Miner/QueryCompilationError.html">QueryCompilationError</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Relationship" data-name="miner::relationship">
+      <a href="../../Miner/Relationship.html">Relationship</a>
+      
+    </li>
+  
+  <li class=" " data-id="/Miner/Table" data-name="miner::table">
+      <a href="../../Miner/Table.html">Table</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> Miner::Driver::Sqlite
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../../Miner/Driver/Sqlite.html">Miner::Driver::Sqlite</a></li><li class="superclass"><a href="../../Miner/Driver.html">Miner::Driver</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+
+
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#fields_for_table%28table%3ATable%29%3AHash%28String%2CField%29-instance-method" class="signature"><strong>#fields_for_table</strong>(table : Table) : Hash(String, Field)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#primary_key_for_table%28table%3ATable%29%3AString-instance-method" class="signature"><strong>#primary_key_for_table</strong>(table : Table) : String</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#relationships_for_table%28table%3ATable%29%3AHash%28String%2CRelationship%29-instance-method" class="signature"><strong>#relationships_for_table</strong>(table : Table) : Hash(String, Relationship)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+  <h3>Instance methods inherited from class <code><a href="../../Miner/Driver.html">Miner::Driver</a></code></h3>
+  
+  
+    <a href="../../Miner/Driver.html#execute%28query%3AQuery%29-instance-method" class="tooltip">
+      <span>execute(query : Query)</span>
+    execute</a>, 
+    
+  
+    <a href="../../Miner/Driver.html#fetch%28query%3AQuery%29-instance-method" class="tooltip">
+      <span>fetch(query : Query)</span>
+    fetch</a>
+    
+  
+
+
+    
+
+  <h3>Class methods inherited from class <code><a href="../../Miner/Driver.html">Miner::Driver</a></code></h3>
+  
+  
+    <a href="../../Miner/Driver.html#new%28config%29-class-method" class="tooltip">
+      <span>new(config)</span>
+    new</a>
+    
+  
+
+
+  
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+  
+</div>
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="fields_for_table&#40;table:Table&#41;:Hash&#40;String,Field&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>fields_for_table</strong>(table : <a href="../../Miner/Table.html">Table</a>) : Hash(String, <a href="../../Miner/Field.html">Field</a>)
+
+        <a class="method-permalink" href="#fields_for_table%28table%3ATable%29%3AHash%28String%2CField%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="primary_key_for_table&#40;table:Table&#41;:String-instance-method">
+      <div class="signature">
+        
+        def <strong>primary_key_for_table</strong>(table : <a href="../../Miner/Table.html">Table</a>) : String
+
+        <a class="method-permalink" href="#primary_key_for_table%28table%3ATable%29%3AString-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="relationships_for_table&#40;table:Table&#41;:Hash&#40;String,Relationship&#41;-instance-method">
+      <div class="signature">
+        
+        def <strong>relationships_for_table</strong>(table : <a href="../../Miner/Table.html">Table</a>) : Hash(String, <a href="../../Miner/Relationship.html">Relationship</a>)
+
+        <a class="method-permalink" href="#relationships_for_table%28table%3ATable%29%3AHash%28String%2CRelationship%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
