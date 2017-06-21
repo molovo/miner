@@ -51,7 +51,8 @@ module Miner
       @relationships = @database.relationships_for_table self
     end
 
-    def set_alias(@alias)
+    def set_alias(@alias) : self
+      self
     end
 
     def has_field?(name : String) : Bool

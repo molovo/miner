@@ -4,7 +4,6 @@ module Miner
     @connection : DB::Database
 
     def initialize(@config)
-      print "Connecting to #{@config.dsn}"
       @connection = DB.open @config.dsn
     end
 

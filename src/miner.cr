@@ -14,4 +14,19 @@ module Miner
       database
     end
   end
+
+  config = Miner::Config.new({
+    "name"     => "world",
+    "username" => "test_user",
+    "password" => "test_password",
+  })
+
+  Miner.set_default_database Miner::Database.new(config)
+
+  query = Query.new "city"
+  query.join("country")
+       .on("Code", "=", "parent.CountryCode")
+       .where("Name", "=", "Kenya")
+  query.compile
+  puts query.sql
 end

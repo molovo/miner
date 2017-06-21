@@ -2,7 +2,7 @@ require "../spec_helper"
 
 describe Miner::QueryBuilder do
   describe "#compile_join_type" do
-    query = Miner::Query.new "countries"
+    query = Miner::Query.new "country"
     query.type === Miner::Query::Type::Join
     builder = Miner::QueryBuilder.new query
 

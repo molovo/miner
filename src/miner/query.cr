@@ -270,23 +270,13 @@ module Miner
     private def add_clause(clause_type : String, delimiter : String, column : Value, operator : String, value : Value) : self
       query = self
 
-      # Join queries need to be handled slightly differently, as where and
-      # having clauses should be assigned to the top level query
-      # if @type.join?
-      #   if clause_type === "where" || clause_type === "having"
-      #     while !query.nil? && query.parent.is_a?(Query)
-      #       query = query.parent
-      #     end
-      #   end
-      # end
-
       # If this is the first clause in a group, replace the delimiter
       # with the correct keyword
-      # unless query.nil?
-      #   if query.clauses[clause_type].size === 0
-      #     delimiter = clause_type.upcase
-      #   end
-      # end
+      unless query.nil?
+        if query.clauses[clause_type].size === 0
+          delimiter = clause_type.upcase
+        end
+      end
 
       # If the value is a subquery, assign the query's parent
       if value.is_a?(Query)
@@ -340,7 +330,7 @@ module Miner
     #         .on("id", "=", "parent.country_id")
     #         .join("language")
     #           .on("country_id", "=", "parent.id")
-    def join(table : Table | String, type : JoinType = JoinType::Left) : self
+    def join(table : Table | String, type : JoinType = JoinType::Left) : Query
       # If a string is passed into the constructor, use it as a
       # table name and create a new Table instance
       if table.is_a?(String)
@@ -376,7 +366,7 @@ module Miner
     #     query = Miner::Query.new("countries")
     #       .order_by("language", Miner::Query::Sort::Asc)
     #       .order_by("name", Miner::Query::Sort::Asc)
-    def order_by(field : String, direction : Sort = Sort::Asc)
+    def order_by(field : String, direction : Sort = Sort::Asc) : self
       @order_fields << {field, direction}
 
       self
@@ -395,7 +385,7 @@ module Miner
     #         {"name", Miner::Query::Sort::Desc},
     #         {"language", Miner::Query::Sort::Asc}
     #       )
-    def order_by(*fields : String | Tuple(String, Sort))
+    def order_by(*fields : String | Tuple(String, Sort)) : self
       fields.each do |field|
         if field.is_a?(Tuple(String, Sort))
           return order_by field[0], field[1]
@@ -403,10 +393,12 @@ module Miner
 
         order_by field
       end
+
+      self
     end
 
     # Set the group fields for the query
-    def group_by(*fields : String)
+    def group_by(*fields : String) : self
       fields.each do |field|
         @group_fields << field
       end
