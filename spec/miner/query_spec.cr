@@ -19,22 +19,22 @@ describe Miner::Query do
     end
   end
 
-  describe "#set_parent" do
+  describe "#parent=" do
     it "should set the parent" do
       child = Miner::Query.new "country"
       parent = Miner::Query.new "city"
 
-      child.set_parent parent
+      child.parent = parent
 
       child.parent.should eq(parent)
       child.table.alias.should eq("city___country")
     end
   end
 
-  describe "#set_join_type" do
+  describe "#join_type=" do
     it "should set the join type" do
       query = Miner::Query.new "country"
-      query.set_join_type Miner::Query::JoinType::Left
+      query.join_type = Miner::Query::JoinType::Left
 
       query.join_type.should eq(Miner::Query::JoinType::Left)
     end
@@ -45,30 +45,17 @@ describe Miner::Query do
       query = Miner::Query.new "country"
       query.select "name", "code"
 
-      query.fields.should eq(["country.name", "country.code"])
-    end
-
-    it "should cascade fields to the parent" do
-      child = Miner::Query.new "country"
-      parent = Miner::Query.new "city"
-
-      child.set_parent parent
-      child.select("name", "code")
-
-      parent.fields.should eq(["city___country.name", "city___country.code"])
+      query.fields.should eq(["name", "code"])
     end
   end
 
   describe "#update" do
-
   end
 
   describe "#insert" do
-
   end
 
   describe "#delete" do
-
   end
 
   describe "#where" do
@@ -86,7 +73,7 @@ describe Miner::Query do
 
       query.clauses["where"].should eq([
         {"WHERE", "name", "=", "London"},
-        {"AND", "code", "=", "GBR"}
+        {"AND", "code", "=", "GBR"},
       ])
     end
 
@@ -97,7 +84,7 @@ describe Miner::Query do
 
       query.clauses["where"].should eq([
         {"WHERE", "name", "!=", "London"},
-        {"AND", "population", ">=", 5000}
+        {"AND", "population", ">=", 5000},
       ])
     end
   end
@@ -110,7 +97,7 @@ describe Miner::Query do
 
       query.clauses["where"].should eq([
         {"WHERE", "name", "=", "London"},
-        {"OR", "code", "=", "GBR"}
+        {"OR", "code", "=", "GBR"},
       ])
     end
 
@@ -121,7 +108,7 @@ describe Miner::Query do
 
       query.clauses["where"].should eq([
         {"WHERE", "name", "!=", "London"},
-        {"OR", "population", ">=", 5000}
+        {"OR", "population", ">=", 5000},
       ])
     end
   end
@@ -141,7 +128,7 @@ describe Miner::Query do
 
       query.clauses["having"].should eq([
         {"HAVING", "name", "=", "London"},
-        {"AND", "code", "=", "GBR"}
+        {"AND", "code", "=", "GBR"},
       ])
     end
 
@@ -152,7 +139,7 @@ describe Miner::Query do
 
       query.clauses["having"].should eq([
         {"HAVING", "name", "!=", "London"},
-        {"AND", "population", ">=", 5000}
+        {"AND", "population", ">=", 5000},
       ])
     end
   end
@@ -165,7 +152,7 @@ describe Miner::Query do
 
       query.clauses["having"].should eq([
         {"HAVING", "name", "=", "London"},
-        {"OR", "code", "=", "GBR"}
+        {"OR", "code", "=", "GBR"},
       ])
     end
 
@@ -176,7 +163,7 @@ describe Miner::Query do
 
       query.clauses["having"].should eq([
         {"HAVING", "name", "!=", "London"},
-        {"OR", "population", ">=", 5000}
+        {"OR", "population", ">=", 5000},
       ])
     end
   end
@@ -198,7 +185,7 @@ describe Miner::Query do
 
       subquery.clauses["on"].should eq([
         {"ON", "id", "=", "parent.country_id"},
-        {"AND", "code", "=", "GBR"}
+        {"AND", "code", "=", "GBR"},
       ])
     end
 
@@ -206,11 +193,11 @@ describe Miner::Query do
       query = Miner::Query.new "city"
       subquery = query.join("country")
       subquery.on("id", "!=", "parent.country_id")
-           .on("population", ">=", 5000)
+              .on("population", ">=", 5000)
 
       subquery.clauses["on"].should eq([
         {"ON", "id", "!=", "parent.country_id"},
-        {"AND", "population", ">=", 5000}
+        {"AND", "population", ">=", 5000},
       ])
     end
   end
@@ -224,7 +211,7 @@ describe Miner::Query do
 
       subquery.clauses["on"].should eq([
         {"ON", "id", "=", "parent.country_id"},
-        {"OR", "code", "=", "GBR"}
+        {"OR", "code", "=", "GBR"},
       ])
     end
 
@@ -236,7 +223,7 @@ describe Miner::Query do
 
       subquery.clauses["on"].should eq([
         {"ON", "id", "!=", "parent.country_id"},
-        {"OR", "population", ">=", 5000}
+        {"OR", "population", ">=", 5000},
       ])
     end
   end

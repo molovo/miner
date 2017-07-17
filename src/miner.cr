@@ -1,3 +1,5 @@
+require "http/server"
+require "json"
 require "./miner/*"
 require "./miner/drivers/*"
 
@@ -15,18 +17,31 @@ module Miner
     end
   end
 
-  config = Miner::Config.new({
-    "name"     => "world",
-    "username" => "test_user",
-    "password" => "test_password",
-  })
+  # config = Miner::Config.new({
+  #   "name"     => "world",
+  #   "username" => "test_user",
+  #   "password" => "test_password",
+  # })
 
-  Miner.set_default_database Miner::Database.new(config)
+  # Miner.set_default_database Miner::Database.new(config)
 
-  query = Query.new "city"
-  query.join("country")
-       .on("Code", "=", "parent.CountryCode")
-       .where("Name", "=", "Kenya")
-  query.compile
-  puts query.sql
+  # server = HTTP::Server.new(8000) do |context|
+  #   context.response.content_type = "text/plain"
+
+  #   query = Query.new("country")
+  #                .where("Continent", "=", "Asia")
+  #   query.join("city")
+  #        .on("CountryCode", "=", "parent.Code")
+  #        .where("Population", ">", 10000)
+  #        .join("country")
+  #        .on("Code", "=", "parent.parent.Code")
+  #        .where("Population", ">", 100000)
+  #   query.order_by({"name", Query::Sort::Asc})
+
+  #   results = query.fetch
+  #   context.response.print results.to_json
+  # end
+
+  # puts "Listening on http://127.0.0.1:8000"
+  # server.listen
 end

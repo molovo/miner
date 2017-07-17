@@ -35,13 +35,37 @@ module Miner
     # Execute a query against the database and return the result set
     def fetch(query : Query) : Collection?
       results = @driver.fetch(query)
+      table = query.table
+      fields = table.fields
 
       collection = Collection.new
-      results.each do |row|
-        pp row
-        # puts "#{results.column_name(3)} #{results.column_name(4)} (#{results.column_name(0)})"
-        # puts "#{results.read(Int32)} #{results.read(String)} (#{results.read(Int32)})"
+      results.each do
+        data = {} of String => Field::Value
+        if fields.nil?
+          raise "Table has no fields"
+        else
+          fields.each do |field|
+            name = field.first
+            field = field.last
+            value = results.read field.cast_type
+
+            unless value.is_a?(Slice(UInt8))
+              data[name] = value
+            end
+          end
+
+          model = Model.new query.table, data
+          id = model.id
+
+          puts model.to_json
+
+          if id.is_a?(Int64)
+            collection[id] = model
+          end
+        end
       end
+
+      collection
     end
 
     def fields_for_table(table : Table) : Hash(String, Field)

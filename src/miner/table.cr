@@ -19,10 +19,11 @@ module Miner
     @relationships : Hash(String, Relationship)? = {} of String => Relationship
 
     getter :name,
-      :alias,
       :fields,
       :primary_key,
       :relationships
+
+    property :alias
 
     # Create the table object
     #
@@ -49,10 +50,6 @@ module Miner
       @fields = @database.fields_for_table self
       @primary_key = @database.primary_key_for_table self
       @relationships = @database.relationships_for_table self
-    end
-
-    def set_alias(@alias) : self
-      self
     end
 
     def has_field?(name : String) : Bool

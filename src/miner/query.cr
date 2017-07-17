@@ -3,7 +3,7 @@ module Miner
   # into SQL statements by the query builder
   class Query
     # An alias for the range of values which can be accepted as query parameters
-    alias Value = String | Int32 | Time | Char | Array(Value) | self
+    alias Value = Field::Value | Array(Field::Value) | self
 
     # Constants for declaring sort direction
     enum Sort
@@ -39,14 +39,15 @@ module Miner
     getter :table,
       :type,
       :joins,
-      :join_type,
       :database,
       :fields,
       :values,
-      :parent,
       :clauses,
       :compiled,
       :sql
+
+    property :join_type,
+      :parent
 
     @table : Table
     @join_type : JoinType?
@@ -120,22 +121,18 @@ module Miner
     end
 
     # Set a parent query for subqueries and joins
-    def set_parent(parent : Query) : self
+    def parent=(parent : Query)
       # Set the parent queries alias as a prefix to the table alias
-      @table.set_alias("#{parent.table.alias}___#{@table.alias}")
+      @table.alias = "#{parent.table.alias}___#{@table.alias}"
       @parent = parent
-
-      self
     end
 
     # Sets the type for the query
-    def set_type(@type : Type) : self
-      self
+    def type=(@type : Type)
     end
 
     # Sets the join type for a child query
-    def set_join_type(@join_type : JoinType) : self
-      self
+    def join_type=(@join_type : JoinType)
     end
 
     # Set the query type to select, and set the fields to be selected
@@ -339,9 +336,9 @@ module Miner
 
       # Create a new subquery, and assign its parent and join type
       query = Query.new table, @database
-      query.set_parent(self)
-      query.set_type(Type::Join)
-      query.set_join_type(type)
+      query.parent = self
+      query.type = Type::Join
+      query.join_type = type
 
       # Append the subquery to the joins array
       self.joins << query
@@ -424,7 +421,7 @@ module Miner
       if builder.nil?
         @compiled = false
         @sql = nil
-        raise QueryCompilationError.new("No query builder found")
+        raise Errors::QueryCompilationError.new("No query builder found")
       end
 
       unless builder.nil?
